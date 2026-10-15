@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import confetti from 'canvas-confetti';
-import { Coffee, Sparkles, Heart, Send, Check } from 'lucide-react';
+import { IceCreamCone, Sparkles, Send } from 'lucide-react';
 import { sound } from '../utils/sound';
 import { SITE_DATA } from '../data/content';
 
@@ -93,7 +93,7 @@ export default function CravingCultureInvite() {
           color: '#e11d48',
           boxShadow: '0 2px 8px rgba(0,0,0,0.04)'
         }}>
-          <Coffee size={18} />
+          <IceCreamCone size={18} />
           <span>{data.badge}</span>
         </div>
 
@@ -182,7 +182,7 @@ export default function CravingCultureInvite() {
             boxShadow: '0 12px 28px rgba(255, 140, 165, 0.25)',
             animation: 'gentleBounce 0.4s ease-out'
           }}>
-            <div style={{ fontSize: '2.5rem', marginBottom: '8px' }}>🎉☕🍰</div>
+            <div style={{ fontSize: '2.5rem', marginBottom: '8px' }}>🎉🍦🍨</div>
 
             <h3 className="font-hand" style={{ fontSize: '2.2rem', color: '#e11d48', fontWeight: 700, marginBottom: '10px' }}>
               {data.accepted.title}
@@ -193,7 +193,7 @@ export default function CravingCultureInvite() {
             </p>
 
             <a
-              href="sms:?&body=Hey%20Nilesh!%20I%20saw%20the%20website%20and%20I%20am%20down%20for%20Craving%20Culture%20today%20%E2%98%95%F0%9F%8E%89"
+              href="sms:?&body=Hey%20Nilesh!%20I%20saw%20the%20website%20and%20I%20am%20down%20for%20Craving%20Culture%20today%20%F0%9F%8D%A6%F0%9F%8E%89"
               className="btn-kawaii"
               style={{
                 textDecoration: 'none',
@@ -227,7 +227,7 @@ export default function CravingCultureInvite() {
               Whoa, you actually caught it!
             </h3>
             <p style={{ color: '#57534e', fontSize: '1.05rem', lineHeight: 1.6, maxWidth: '460px', margin: '0 auto 16px auto' }}>
-              You're way too quick! But honestly, no pressure whatsoever. If you ever feel like grabbing coffee at Craving Culture another day, the offer is always open. 😊
+              You're way too quick! But honestly, no pressure whatsoever. If you ever feel like grabbing ice cream at Craving Culture another day, the offer is always open. 😊
             </p>
             <button
               onClick={() => {

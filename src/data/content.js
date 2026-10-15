@@ -112,24 +112,24 @@ export const SITE_DATA = {
   },
 
   cravingCulture: {
-    badge: "one tiny question before you go… ☕🥐",
+    badge: "one tiny question before you go… 🍦",
     heading: "Craving Culture today? ✿",
-    subtitle: "Rumour has it it's your favourite hangout spot… and I'd genuinely love to treat you to some good food, iced coffee, and peaceful conversation. Zero pressure, 100% chill vibes.",
-    yesButtonText: "YES, let's go! ☕🍰",
+    subtitle: "Rumour has it it's your favourite hangout spot… and I'd genuinely love to treat you to some ice cream and a nice, easy conversation. Zero pressure, 100% chill vibes.",
+    yesButtonText: "YES, let's go! 🍦🍨",
     noButtonText: "No thanks 🙈",
     runawayPhrases: [
       "Wait what? 🥺",
       "Are you sure?? 👀",
       "Catch me if you can! 🏃💨",
-      "Craving Culture has great coffee though! ☕",
+      "But… the ice cream though! 🍦",
       "Almost had me! 😜",
       "Nope, over here! ✨",
       "I'm too fast for you! 🧸",
       "Okay you're persistent, but YES is cuter! 🌸"
     ],
     accepted: {
-      title: "YAY! Best answer ever! 🎉☕",
-      message: "Coffee, delicious food, and chill vibes are officially on me! Whenever you're free today, let me know. Absolutely no rush.",
+      title: "YAY! Best answer ever! 🎉🍦",
+      message: "Ice cream is officially on me — pick any flavour (or three)! Whenever you're free today, let me know. Absolutely no rush.",
       actionText: "drop Nilesh a quick text 💌"
     }
   },
