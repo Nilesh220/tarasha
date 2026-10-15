@@ -1,0 +1,346 @@
+:root {
+  --color-bg-base: #fff9f6;
+  --color-pink-soft: #ffe4ec;
+  --color-pink-accent: #ff85a1;
+  --color-pink-deep: #ee4266;
+  --color-peach-soft: #ffeedb;
+  --color-peach-accent: #ffb790;
+  --color-lavender-soft: #f1e9ff;
+  --color-lavender-accent: #c499f3;
+  --color-blue-soft: #e3f2fd;
+  --color-blue-accent: #90caf9;
+  --color-cream: #fffdfa;
+  --color-text-main: #3d3434;
+  --color-text-muted: #7d7070;
+  --color-text-light: #a39595;
+  --color-card-border: rgba(255, 182, 193, 0.35);
+
+  --font-hand: 'Gaegu', 'Caveat', cursive;
+  --font-script: 'Caveat', cursive;
+  --font-body: 'Plus Jakarta Sans', 'Quicksand', sans-serif;
+
+  --shadow-soft: 0 10px 30px -5px rgba(255, 182, 193, 0.25), 0 5px 15px -5px rgba(0, 0, 0, 0.04);
+  --shadow-hover: 0 18px 40px -10px rgba(255, 140, 165, 0.35), 0 8px 20px -6px rgba(0, 0, 0, 0.06);
+  --shadow-card: 0 8px 24px rgba(230, 175, 185, 0.2);
+
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 32px;
+  --radius-full: 9999px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg-base);
+  color: var(--color-text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+  background-image: 
+    radial-gradient(#ffd6e0 0.8px, transparent 0.8px),
+    radial-gradient(#ffe0cc 0.8px, var(--color-bg-base) 0.8px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #fff0f3;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffb3c6;
+  border-radius: 10px;
+  border: 2px solid #fff0f3;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff85a1;
+}
+
+/* Typography Helpers */
+.font-hand {
+  font-family: var(--font-hand);
+}
+.font-script {
+  font-family: var(--font-script);
+}
+
+/* Sparkle & Floating Hearts Particles */
+.floating-particle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  animation: floatUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(0.6) rotate(0deg);
+  }
+  50% {
+    opacity: 0.9;
+    transform: translate(var(--dx, 10px), -60px) scale(1.1) rotate(15deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--dx, 20px), -130px) scale(0.4) rotate(30deg);
+  }
+}
+
+/* Dreamy Animations */
+@keyframes gentleBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes gentleWiggle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-3deg);
+  }
+  75% {
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes softPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 0.95;
+  }
+}
+
+@keyframes cloudDrift {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(18px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes starTwinkle {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15) rotate(15deg);
+  }
+}
+
+/* Glassmorphic Pastel Card */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1.5px solid rgba(255, 220, 230, 0.8);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.glass-panel-cream {
+  background: rgba(255, 253, 248, 0.9);
+  backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(255, 230, 215, 0.7);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Cute Buttons */
+.btn-kawaii {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #ff8da1 0%, #ff6b8b 100%);
+  color: #ffffff;
+  font-family: var(--font-hand);
+  font-size: 1.45rem;
+  font-weight: 700;
+  padding: 14px 34px;
+  border-radius: var(--radius-full);
+  border: 3px solid #ffffff;
+  box-shadow: 0 8px 24px -4px rgba(255, 107, 139, 0.45), 0 3px 8px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  text-decoration: none;
+  user-select: none;
+  letter-spacing: 0.5px;
+}
+
+.btn-kawaii:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 14px 30px -4px rgba(255, 107, 139, 0.55), 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.btn-kawaii:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.btn-kawaii-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #ffffff;
+  color: var(--color-pink-deep);
+  font-family: var(--font-hand);
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 10px 24px;
+  border-radius: var(--radius-full);
+  border: 2px solid #ffccd5;
+  box-shadow: 0 4px 14px rgba(255, 182, 193, 0.3);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-kawaii-secondary:hover {
+  background: #fff0f3;
+  transform: translateY(-2px);
+}
+
+/* Washi Tape Accent */
+.washi-tape {
+  position: absolute;
+  height: 22px;
+  width: 80px;
+  background: rgba(255, 209, 220, 0.75);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-1.5deg);
+  border-left: 2px dashed rgba(255, 255, 255, 0.8);
+  border-right: 2px dashed rgba(255, 255, 255, 0.8);
+  z-index: 5;
+}
+
+/* Polaroid Card 3D Flip */
+.polaroid-flip-container {
+  perspective: 1200px;
+  cursor: pointer;
+}
+
+.polaroid-flip-inner {
+  position: relative;
+  width: 100%;
+  transition: transform 0.65s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.polaroid-flip-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.polaroid-face {
+  position: relative;
+  width: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 14px 14px 22px 14px;
+  box-shadow: 0 12px 28px -6px rgba(180, 140, 150, 0.25), 0 4px 10px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(255, 230, 235, 0.9);
+}
+
+.polaroid-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: rotateY(180deg);
+  background: #fffdf8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  text-align: center;
+  border-radius: 12px;
+  background-image: repeating-linear-gradient(#fffdf8, #fffdf8 26px, #f5e4e8 27px, #f5e4e8 28px);
+}
+
+/* Sound & Progress Floating Pill */
+.floating-hud {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid #ffccd5;
+  box-shadow: 0 8px 24px rgba(255, 140, 165, 0.25);
+}
+
+.hud-btn {
+  background: #fff0f5;
+  border: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-pink-deep);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hud-btn:hover {
+  background: #ff85a1;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Blooming Flower Progress */
+.flower-progress {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-hand);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #a855f7;
+}
+
+.flower-icon {
+  font-size: 1.35rem;
+  animation: gentleBounce 2s infinite ease-in-out;
+}
